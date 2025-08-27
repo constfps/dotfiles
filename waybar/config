@@ -1,0 +1,136 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "memory",
+        "cpu",
+        "network",
+        "pulseaudio",
+        "battery",
+    ],
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{player_icon} {title} - {artist}",
+
+        "interval": 1,
+        "title-len": 20,
+        "artist-len": 15,
+
+        "player-icons": {
+            "default": " ",
+            "spotify": " ",
+            "firefox": " ",
+            "chromium": " "
+        },
+    },
+    "hyprland/workspaces": {
+    	"on-scroll-up": "hyprctl dispatch workspace r-1",
+    	"on-scroll-down": "hyprctl dispatch workspace r+1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": " ",
+            "active": " ",
+        },
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "seperate-outputs": true,
+        "rewrite": {
+            "kitty": " ",
+            "firefox": "󰈹 ",
+            "Spotify": " ",
+            "discord": " "
+        }
+    },
+    "memory": {
+        "interval": 5,
+        "format": "   {used:0.1f}GB",
+        "format-alt": "   {percentage}%"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 5,
+        "tooltip": false,
+        "on-click": "kitty -e htop"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format-alt": "{:%H:%M}  ",
+        "format": "{:%H:%M | %D %a}",
+    },
+    "network": {
+        "format-wifi" : "{icon}",
+        "format-alt": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+        "format-ethernet": "󰀂 ",
+        "format-disconnected" : "󰖪 ",
+        "interval": 5,
+        "nospacing": 1,
+        "on-click-right": "kitty -e nmtui",
+        "tooltip-format": "{ipaddr}\n{ifname}\n{netmask}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰 ",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟 ",
+        "format-icons": {
+            "headphone": " ",
+            "default": ["󰖀","󰕾",""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 1
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": {
+            "charging": [
+                "󰢜 ",
+                "󰂆 ",
+                "󰂇 ",
+                "󰂈 ",
+                "󰢝 ",
+                "󰂉 ",
+                "󰢞 ",
+                "󰂊 ",
+                "󰂋 ",
+                "󰂅 "
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
+        "format-full": " ",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    }
+}

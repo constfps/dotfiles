@@ -1,0 +1,113 @@
+/*reset*/
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    padding: 0;
+    /* color: #7aa2f7; */
+    font-family: Noto Nerd Font;
+    font-size: 1.2rem;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#workspaces,
+#mpris,
+#window,
+#clock,
+#tray,
+#memory,
+#cpu,
+#network,
+#pulseaudio,
+#battery
+{
+    padding:0.25rem 0.75rem;
+    margin: 0.25rem 0.3rem;
+    background-color: rgba(31,35,53,0.8);
+    border-radius: 1.5rem;
+}
+
+/*Hyprland Workspaces*/
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    margin: 0 5px;
+    color: #2ac3de;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+}
+
+#workspaces button.urgent {
+    color: #c53b53;
+}
+
+/*MPRIS*/
+ #mpris {
+    color: #c41bc2;
+}
+
+#mpris.spotify {
+    color: #1DB954;
+}
+
+#mpris.firefox, #mpris.chromium {
+    color: #ff0000;
+}
+
+#mpris.paused {
+    color: #474747;
+}
+
+/*Hyprland Window*/
+#window {
+    color: #cf1ba5;
+}
+
+/* i got lazy lmao */
+.modules-right {
+    color: white;
+}
+
+/*Clock*/
+#clock {
+    color: #2ac3de;
+}
+
+/* Memory */
+#memory {
+    color: #ff922b;
+}
+
+/* CPU */
+#cpu {
+    color: #00C7FD;
+}
+
+#battery.critical {
+    color: #ba1818;
+}
+
+#battery.warning {
+    color: #e34f19;
+}
+
+#battery.half {
+    color: #dece1d;
+}
+
+#battery.alright {
+    color: #75cf36;
+}
+
+#battery.full {
+    color: #00ff00;
+}
+
+#pulseaudio {
+    color: #ffff00;
+}
