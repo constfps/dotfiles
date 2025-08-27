@@ -1,6 +1,6 @@
 ## Shit left to do
----
-- [ ] Wofi
+- [x] Wofi
+- [ ] Wofi Animations (maybe)
 - [ ] Notification Daemon
 - [ ] Modulate Hyprland config
 - [ ] Finalize Hyprland binds

@@ -1,0 +1,39 @@
+window {
+    font-size: 1.1em;
+    font-family: "Inter";
+    color: white;
+
+    background-color: rgba(--wofi-rgb-color0, 0.75);
+    border-radius: 1rem;
+}
+
+#outer-box {
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    /* border-color: black; */
+    padding: 0.45em;
+    /* border-radius: 2rem; */
+}
+
+#scroll {
+    margin-top: 5px;
+}
+
+#input {
+    background-color: rgb(--wofi-rgb-color1);
+    border-style: none;
+    color: white;
+}
+
+#text {
+    color: white;
+}
+
+#entry:selected {
+    background: #E0AAFF;
+    background: linear-gradient(90deg, rgba(--wofi-rgb-color3, 1) 0%, rgba(--wofi-rgb-color3, 1) 35%, rgba(0, 0, 0, 0) 100%);
+}
+
+#text:selected {
+    color: #3c096c;
+}
