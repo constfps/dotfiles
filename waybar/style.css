@@ -26,7 +26,7 @@ window#waybar {
 {
     padding:0.25rem 0.75rem;
     margin: 0.25rem 0.3rem;
-    background-color: rgba(31,35,53,0.8);
+    background-color: rgba(0,0,0,0.6);
     border-radius: 1.5rem;
 }
 
@@ -34,16 +34,28 @@ window#waybar {
 #workspaces button {
     all: initial;
     min-width: 0;
-    margin: 0 5px;
-    color: #2ac3de;
+    margin: 0 3px;
+    color: #c77dff;
+    background-color: #240046;
+    padding: 0 0.75rem;
+    border-radius: 1.5rem;
+    transition: background-color 0.25s, color 0.25s;
+    transition-timing-function: ease-in;
 }
 
 #workspaces button:hover {
     background-color: transparent;
 }
 
+#workspaces button.active {
+    color: #240046;
+    background-color: #c77dff;
+}
+
+/* prob never gonna happen but might as well */
 #workspaces button.urgent {
-    color: #c53b53;
+    color: lightyellow;
+    background-color: yellow;
 }
 
 /*MPRIS*/

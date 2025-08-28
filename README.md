@@ -2,7 +2,8 @@
 - [x] Wofi
 - [ ] Wofi Animations (maybe)
 - [ ] Notification Daemon
-- [ ] Modulate Hyprland config
+- [ ] Hyprland Animations
+- [x] Modulate Hyprland config
 - [ ] Finalize Hyprland binds
-- [ ] Customize animations
+- [ ] Hyprland animations
 - [ ] Auth agent
