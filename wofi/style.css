@@ -4,15 +4,11 @@ window {
     color: white;
 
     background-color: rgba(--wofi-rgb-color0, 0.75);
-    border-radius: 1rem;
+    border-radius: 1.1rem;
 }
 
 #outer-box {
-    /* border-width: 1px; */
-    /* border-style: solid; */
-    /* border-color: black; */
     padding: 0.45em;
-    /* border-radius: 2rem; */
 }
 
 #scroll {
@@ -27,11 +23,17 @@ window {
 
 #text {
     color: white;
+    transition: color 0.15s;
+    transition-timing-function: ease-in-out;
 }
 
 #entry:selected {
     background: #E0AAFF;
     background: linear-gradient(90deg, rgba(--wofi-rgb-color3, 1) 0%, rgba(--wofi-rgb-color3, 1) 35%, rgba(0, 0, 0, 0) 100%);
+    transition: background 0.15s;
+    transition-timing-function: ease-in-out;
+    border-radius: 1rem;
+    padding-left: 10px;
 }
 
 #text:selected {

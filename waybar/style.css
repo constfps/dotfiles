@@ -40,7 +40,7 @@ window#waybar {
     padding: 0 0.75rem;
     border-radius: 1.5rem;
     transition: background-color 0.25s, color 0.25s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
 }
 
 #workspaces button:hover {
