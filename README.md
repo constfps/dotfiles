@@ -7,3 +7,4 @@
 - [ ] Finalize Hyprland binds
 - [ ] Hyprland animations
 - [ ] Auth agent
+- [ ] GRUB
