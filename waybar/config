@@ -70,8 +70,8 @@
     },
     "clock": {
         "tooltip-format": "{calendar}",
-        "format-alt": "{:%H:%M}  ",
-        "format": "{:%H:%M | %D %a}",
+        "format": "{:%H:%M}",
+        "format-alt": "{:%D %a}",
     },
     "network": {
         "format-wifi" : "{icon}",
@@ -82,7 +82,7 @@
         "interval": 5,
         "nospacing": 1,
         "on-click-right": "kitty -e nmtui",
-        "tooltip-format": "{ipaddr}\n{ifname}\n{netmask}"
+        "tooltip-format": "IP: {ipaddr}\nSubnet: {netmask}\nGateway: {gwaddr}"
     },
     "pulseaudio": {
         "format": "{icon}",

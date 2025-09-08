@@ -13,6 +13,12 @@ window#waybar {
     background-color: rgba(0, 0, 0, 0);
 }
 
+tooltip {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px 10px;
+    border-radius: 1rem;
+}
+
 #workspaces,
 #mpris,
 #window,
@@ -40,7 +46,7 @@ window#waybar {
     padding: 0 0.75rem;
     border-radius: 1.5rem;
     transition: background-color 0.25s, color 0.25s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease;
 }
 
 #workspaces button:hover {
