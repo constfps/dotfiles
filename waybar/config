@@ -85,16 +85,19 @@
         "tooltip-format": "IP: {ipaddr}\nSubnet: {netmask}\nGateway: {gwaddr}"
     },
     "pulseaudio": {
-        "format": "{icon}",
-        "format-bluetooth": "󰂰 ",
-        "nospacing": 1,
-        "tooltip-format": "Volume : {volume}%",
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% 󰂯",
         "format-muted": "󰝟 ",
+        "nospacing": 1,
+        "tooltip-format": "{desc}",
         "format-icons": {
             "headphone": " ",
             "default": ["󰖀","󰕾",""]
         },
         "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "reverse-scrolling": true,
         "scroll-step": 1
     },
     "battery": {
