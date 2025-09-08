@@ -7,3 +7,6 @@
 - [ ] Hyprland animations
 - [ ] Auth agent
 - [ ] GRUB
+- [ ] Power on/off menu
+- [ ] Wallpaper changer
+- [ ] Pywal config
