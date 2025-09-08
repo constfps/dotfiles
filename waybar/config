@@ -17,6 +17,7 @@
         "network",
         "pulseaudio",
         "battery",
+        "custom/power"
     ],
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
@@ -101,7 +102,7 @@
         "scroll-step": 1
     },
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": {
             "charging": [
                 "󰢜 ",
@@ -131,9 +132,16 @@
         "format-full": " ",
         "interval": 5,
         "states": {
+            "alright": 100,
+            "half": 50,
             "warning": 20,
-            "critical": 10
+            "critical": 10,
         },
         "tooltip": false
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false,
     }
 }
