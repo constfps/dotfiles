@@ -1,12 +1,12 @@
 ## Shit left to do
 - [x] Wofi
 - [x] Wofi Animations
-- [ ] Notification Daemon
+- [x] Notification Daemon
 - [x] Modulate Hyprland config
 - [ ] Finalize Hyprland binds
 - [ ] Hyprland animations
 - [ ] Auth agent
 - [ ] GRUB
-- [ ] Power on/off menu
+- [x] Power on/off menu
 - [ ] Wallpaper changer
 - [ ] Pywal config

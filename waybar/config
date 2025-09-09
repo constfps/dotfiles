@@ -57,8 +57,9 @@
     },
     "memory": {
         "interval": 5,
-        "format": "   {used:0.1f}GB",
-        "format-alt": "   {percentage}%"
+        "format": "  {used:0.1f}GB",
+        "format-alt": "  {percentage}%",
+        "tooltip": false,
     },
     "cpu": {
         "format": "  {usage}%",
@@ -88,12 +89,12 @@
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% 󰂯",
-        "format-muted": "󰝟 ",
+        "format-muted": "󰝟",
         "nospacing": 1,
         "tooltip-format": "{desc}",
         "format-icons": {
             "headphone": " ",
-            "default": ["󰖀","󰕾",""]
+            "default": ["󰖀","󰕾"," "]
         },
         "on-click": "pavucontrol",
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
