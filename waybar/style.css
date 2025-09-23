@@ -1,3 +1,5 @@
+@import url("/home/const/.cache/wal/colors-waybar.css");
+
 /*reset*/
 * {
     border: none;
@@ -5,12 +7,13 @@
     min-height: 0;
     padding: 0;
     margin: 0;
-    /* color: #7aa2f7; */
     font-size: 1.2rem;
+    font-family: NotoSans Nerd Font, sans-serifs;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
+    color: @background;
 }
 
 tooltip {
@@ -28,13 +31,19 @@ tooltip {
 #cpu,
 #network,
 #pulseaudio,
+#pulseaudio-slider,
 #battery,
 #custom-power
 {
     padding:0.25rem 0.75rem;
     margin: 0.25rem 0.3rem;
-    background-color: rgba(0,0,0,0.6);
+    color: @foreground;
+    background-color: @background;
     border-radius: 1.5rem;
+}
+
+window#waybar.empty {
+    background-color: transparent;
 }
 
 /*Hyprland Workspaces*/
@@ -42,96 +51,18 @@ tooltip {
     all: initial;
     min-width: 0;
     margin: 0 3px;
-    color: #c77dff;
-    background-color: #240046;
+    background-color: @color1;
     padding: 0 0.75rem;
     border-radius: 1.5rem;
     transition: background-color 0.25s, color 0.25s;
     transition-timing-function: ease;
 }
 
-#workspaces button:hover {
-    background-color: transparent;
-}
-
 #workspaces button.active {
-    color: #240046;
-    background-color: #c77dff;
-}
-
-/* prob never gonna happen but might as well */
-#workspaces button.urgent {
-    color: lightyellow;
-    background-color: yellow;
-}
-
-/*MPRIS*/
- #mpris {
-    color: #c41bc2;
-}
-
-#mpris.spotify {
-    color: #1DB954;
-}
-
-#mpris.firefox, #mpris.chromium {
-    color: #ff0000;
+    color: @background;
+    background-color: @foreground;
 }
 
 #mpris.paused {
-    color: #474747;
-}
-
-/*Hyprland Window*/
-#window {
-    color: #cf1ba5;
-}
-
-/* i got lazy lmao */
-.modules-right {
-    color: white;
-}
-
-/*Clock*/
-#clock {
-    color: #2ac3de;
-}
-
-/* Memory */
-#memory {
-    color: #ff922b;
-}
-
-/* CPU */
-#cpu {
-    color: #00C7FD;
-}
-
-#battery.critical {
-    color: #ba1818;
-}
-
-#battery.warning {
-    color: #e34f19;
-}
-
-#battery.half {
-    color: #dece1d;
-}
-
-#battery.alright {
-    color: #75cf36;
-}
-
-#battery.full {
-    color: #00ff00;
-}
-
-#pulseaudio {
-    color: #ffff00;
-}
-
-#custom-power {
-    color: #ba1818;
-    font-weight: 500;
+    color: @background;
 }

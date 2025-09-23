@@ -1,6 +1,6 @@
 window {
     font-size: 1.1em;
-    font-family: "Inter";
+    font-family: NotoSans Nerd Font, sans-serif;
     color: white;
 
     background-color: rgba(--wofi-rgb-color0, 0.75);
@@ -8,7 +8,7 @@ window {
 }
 
 #outer-box {
-    padding: 0.45em;
+    padding: 1rem;
 }
 
 #scroll {
@@ -17,22 +17,33 @@ window {
 
 #input {
     background-color: rgb(--wofi-rgb-color1);
-    border-radius: 0.5rem;
+    border-radius: 1em;
+    border: none;
     color: white;
     transition-property: background-color, border-color, color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
 
+#input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+#text:placeholder{
+    color: rgb(--wofi-rgb-color1);
+}
+
 #text {
-    color: white;
+    color: rgb(--wofi-rgb-color7);
     transition: color 0.15s;
     transition-timing-function: ease-in-out;
 }
 
 #entry:selected {
+    outline: none;
     background: #E0AAFF;
-    background: linear-gradient(90deg, rgba(--wofi-rgb-color3, 1) 0%, rgba(--wofi-rgb-color3, 1) 35%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(--wofi-rgb-color1, 1) 0%, rgba(0, 0, 0, 0) 100%);
     transition: background 0.15s;
     transition-timing-function: ease-in-out;
     border-radius: 1rem;
@@ -40,5 +51,5 @@ window {
 }
 
 #text:selected {
-    color: #3c096c;
+    color: rgb(--wofi-rgb-color7);
 }
