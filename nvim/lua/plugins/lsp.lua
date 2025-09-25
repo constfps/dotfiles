@@ -1,60 +1,41 @@
 return {
     {
-        "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup()
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            {
+                "folke/lazydev.nvim",
+                ft = "lua", -- only load on lua files
+                opts = {
+                    library = {
+                        -- See the configuration section for more details
+                        -- Load luvit types when the `vim.uv` word is found
+                        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                    },
+                },
+            },
+        },
+        opts = {
+            servers = {
+                lua_ls = {}
+            }
+        },
+        config = function(_, opts)
+            for server, config in pairs(opts.servers) do
+                config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+                vim.lsp.config(server, config)
+            end
         end
     },
     {
-        "nvim-java/nvim-java"
+        "williamboman/mason.nvim",
+        opts = {}
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "ts_ls",
-                    "clangd",
-                    "cssls",
-                    "jdtls",
-                    "pylsp",
-                    "bashls",
-                    "intelephense"
-                }
-            })
-        end
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-            local lspconfig = require('lspconfig')
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities
-            })
-            lspconfig.tsserver.setup({
-                capabilities = capabilities
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities
-            })
-            lspconfig.cssls.setup({
-                capabilities = capabilities
-            })
-            lspconfig.jdtls.setup({
-                capabilities = capabilities
-            })
-            lspconfig.pylsp.setup({
-                capabilities = capabilities
-            })
-            lspconfig.bashls.setup({
-                capabilities = capabilities
-            })
-            lspconfig.intelephense.setup({
-                capabilities = capabilities
-            })
-        end
+        opts = {
+            ensure_installed = {
+                "lua_ls",
+            }
+        }
     }
 }

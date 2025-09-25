@@ -3,13 +3,14 @@
 - [x] Wofi Animations
 - [x] Notification Daemon
 - [x] Modulate Hyprland config
-- [ ] Remake Waybar config
 - [ ] Finalize Hyprland binds
 - [x] Hyprland animations
 - [ ] Auth agent
 - [ ] GRUB
+- [x] Redo Neovim Config
 - [x] Power on/off menu
 - [x] Wallpaper changer (waypaper)
 - [x] Pywal config
-- [ ] Make Hyprland use Pywal colors
-- [ ] Make wlogout use Pywal colors
+- [x] Make Hyprland use Pywal colors
+- [x] Make wlogout use Pywal colors
+- [x] Zathura Config
