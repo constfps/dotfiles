@@ -55,6 +55,7 @@
             "libreoffice-impress": " ",
             "libreoffice-writer": " ",
             "org.pwmt.zathura": " ",
+            "notion-calendar-electron": " "
         }
     },
     "memory": {
